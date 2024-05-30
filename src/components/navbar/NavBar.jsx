@@ -29,10 +29,10 @@ export default function NavBar() {
           </li>
         </ul>
         <div>
-          <ul>
+          <ul className={styles.ulButton}>
             <li>
               <a href="#">
-                <button>
+                <button className={styles.btnSM20}>
                   <PersonIcon />
                   Login / Register
                 </button>
@@ -40,14 +40,14 @@ export default function NavBar() {
             </li>
             <li>
               <a href="#">
-                <button>
+                <button className={styles.btnSM20}>
                   <Search />
                 </button>
               </a>
             </li>
             <li>
               <a href="#">
-                <button>
+                <button className={styles.btnSM20}>
                   <Cart />
                   <small>1</small>
                 </button>
@@ -55,7 +55,7 @@ export default function NavBar() {
             </li>
             <li>
               <a href="#">
-                <button>
+                <button className={styles.btnSM20}>
                   <Heart />
                   <small>1</small>
                 </button>
