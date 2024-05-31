@@ -21,6 +21,8 @@
   --color-default-black: #1b1b1b;
   --black-15: #00000025;
   --gray: #737373;
+  --light-gray:#bdbdbd;
+  --btn-outline-hover: #80808009;
   --font-family-montserrat: "Montserrat", sans-serif;
   --transition-ease: all 300ms ease-in-out;
   font-synthesis: none;

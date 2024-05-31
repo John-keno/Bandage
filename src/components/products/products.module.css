@@ -1,0 +1,83 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  padding: 80px 0 80px 0;
+  gap: 24px;
+}
+.container .title {
+  display: inline-flex;
+  width: 100%;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.productCard {
+  display: grid;
+  justify-content: center;
+  text-align: center;
+  grid-template-columns: repeat(
+    5,
+    minmax(100px, 183px)
+  ); /* 5 equal-width columns with min-width 100px max-width 183px */
+  padding: 8px 0px 8px 0px;
+  gap: 30px;
+}
+
+.productCard > .item > .details {
+  display: flex;
+  flex-direction: column;
+  padding: 25px 25px 35px 25px;
+  gap: 10px;
+}
+
+.productCard > .item > img {
+  width: 100%;
+  height: 238px;
+  object-fit: cover;
+}
+
+.productCard > .item > .details > .prices {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  padding: 5px 3px 5px 3px;
+  gap: 5px;
+}
+
+.priceLeft {
+  color: var(--light-gray);
+}
+.priceRight {
+  color: var(--celadon-Green);
+}
+a {
+  color: var(--gray);
+}
+h3 {
+  text-align: center;
+}
+h4 {
+  font-weight: 400;
+  text-align: center;
+  color: var(--gray);
+}
+p {
+  text-align: center;
+}
+.btnDiv {
+    display: flex;
+    justify-content: center;
+}
+.btnMD{
+    color: var(--button-blue);
+    border: 1px solid var(--button-blue);
+    padding: 15px 40px 15px 40px;
+    background: transparent;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 22px;
+    letter-spacing: 0.2px;
+}
+.btnMD:hover {
+    background-color: var(--btn-outline-hover);
+  }
