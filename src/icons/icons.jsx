@@ -374,3 +374,44 @@ export function PersonIcon() {
     </svg>
   );
 }
+
+export function AnimatedLoading() {
+  return (
+    <svg
+      width="300"
+      height="100"
+      viewBox="0 0 300 100"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <circle cx="50" cy="50" r="20" fill="#E74040">
+        <animate
+          attributeName="r"
+          begin="0.5s"
+          dur="2s"
+          values="10; 30; 10"
+          repeatCount="indefinite"
+        />
+      </circle>
+
+      <circle cx="150" cy="50" r="20" fill="#23A6F0">
+        <animate
+          attributeName="r"
+          begin="1s"
+          dur="2s"
+          values="10; 30; 10"
+          repeatCount="indefinite"
+        />
+      </circle>
+
+      <circle cx="250" cy="50" r="20" fill="#23856D">
+        <animate
+          attributeName="r"
+          begin="1.5s"
+          dur="2s"
+          values="10; 30; 10"
+          repeatCount="indefinite"
+        />
+      </circle>
+    </svg>
+  );
+}

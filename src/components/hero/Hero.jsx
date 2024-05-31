@@ -1,6 +1,6 @@
-import styles from "./categories.module.css";
+import styles from "./hero.module.css";
 
-export default function Categories() {
+export default function Hero() {
   return (
     <div className={styles.gridContainer}>
       <div id={styles.img0}>

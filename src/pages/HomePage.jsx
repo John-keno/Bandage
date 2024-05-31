@@ -1,11 +1,12 @@
-import Categories from "../components/Categories/Categories";
+
+import Hero from "../components/hero/Hero";
 import Products from "../components/products/Products";
 
 export default function HomePage() {
   return (
     <>
-      <section className="sectionCategories">
-        <Categories />
+      <section className="hero">
+        <Hero />
       </section>
       <section className="sectionProducts">
         <Products />

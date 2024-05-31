@@ -33,7 +33,7 @@
 .productCard > .item > img {
   width: 100%;
   height: 238px;
-  object-fit: cover;
+  object-fit: contain;
 }
 
 .productCard > .item > .details > .prices {
@@ -80,4 +80,15 @@ p {
 }
 .btnMD:hover {
   background-color: var(--btn-outline-hover);
+}
+
+.animatedLoading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.animatedLoading svg {
+  width: 100%;
 }

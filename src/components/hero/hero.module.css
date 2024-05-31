@@ -17,8 +17,6 @@
 }
 #img0 {
     grid-area: left;
-    /* width: 451px;
-    height: 616px; */
     background-image: url(/card-cover-5.svg);
     background-size: cover;
     background-position: center;
@@ -27,8 +25,6 @@
 
 #img1 {
     grid-area: top;
-    /* width: 679px;
-    height: 300px; */
     background-image: url(/card-cover-6.svg);
     background-size: cover;
     background-position: center;
@@ -36,16 +32,12 @@
 }
 #img2{
     grid-area: bottom1;
-    /* width: 332px;
-    height: 300px; */
     background-image: url(/card-cover-7.svg);
     background-size: cover;
     background-position: center;
 }
 #img3{
     grid-area: bottom2;
-    /* width: 332px;
-    height: 300px; */
     background-image: url(/card-cover-8.svg);
     background-size: cover;
     background-position: center;
