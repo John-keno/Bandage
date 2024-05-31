@@ -26,7 +26,7 @@
 .productCard > .item > .details {
   display: flex;
   flex-direction: column;
-  padding: 25px 25px 35px 25px;
+  padding: 25px 0px 35px 0px;
   gap: 10px;
 }
 
@@ -65,19 +65,19 @@ p {
   text-align: center;
 }
 .btnDiv {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
-.btnMD{
-    color: var(--button-blue);
-    border: 1px solid var(--button-blue);
-    padding: 15px 40px 15px 40px;
-    background: transparent;
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 22px;
-    letter-spacing: 0.2px;
+.btnMD {
+  color: var(--button-blue);
+  border: 1px solid var(--button-blue);
+  padding: 15px 40px 15px 40px;
+  background: transparent;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 22px;
+  letter-spacing: 0.2px;
 }
 .btnMD:hover {
-    background-color: var(--btn-outline-hover);
-  }
+  background-color: var(--btn-outline-hover);
+}

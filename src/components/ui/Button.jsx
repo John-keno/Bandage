@@ -12,7 +12,7 @@ function Button(props) {
 
 Button.propTypes = {
   children: PropTypes.node,
-  className: PropTypes.object || PropTypes.string,
+  className: PropTypes.string,
   onClick: PropTypes.func,
 };
 

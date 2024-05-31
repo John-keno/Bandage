@@ -1,6 +1,10 @@
+import { useGetProductsQuery } from "../../features/service/dummyData";
 import Button from "../ui/Button";
+import ProductItems from "./ProductItems";
 import styles from "./products.module.css";
 export default function Products() {
+  const { data, isError, isLoading } = useGetProductsQuery();
+  console.log("response: ", data);
   return (
     <div className={styles.container}>
       <div className={styles.title}>
@@ -9,116 +13,9 @@ export default function Products() {
         <p>Problems trying to resolve the conflict between</p>
       </div>
       <div className={styles.productCard}>
-        <div className={styles.item}>
-          <img src="/card-cover-8.svg" alt="img" />
-          <div className={styles.details}>
-            <h5>Graphic design</h5>
-            <a href="#">English Department</a>
-            <div className={styles.prices}>
-              <h5 className={styles.priceLeft}>$16.48</h5>
-              <h5 className={styles.priceRight}>$6.48</h5>
-            </div>
-          </div>
-        </div>
-        <div className={styles.item}>
-          <img src="/card-cover-8.svg" alt="img" />
-          <div className={styles.details}>
-            <h5>Graphic design</h5>
-            <a href="#">English Department</a>
-            <div className={styles.prices}>
-              <h5 className={styles.priceLeft}>$16.48</h5>
-              <h5 className={styles.priceRight}>$6.48</h5>
-            </div>
-          </div>
-        </div>
-        <div className={styles.item}>
-          <img src="/card-cover-8.svg" alt="img" />
-          <div className={styles.details}>
-            <h5>Graphic design</h5>
-            <a href="#">English Department</a>
-            <div className={styles.prices}>
-              <h5 className={styles.priceLeft}>$16.48</h5>
-              <h5 className={styles.priceRight}>$6.48</h5>
-            </div>
-          </div>
-        </div>
-        <div className={styles.item}>
-          <img src="/card-cover-8.svg" alt="img" />
-          <div className={styles.details}>
-            <h5>Graphic design</h5>
-            <a href="#">English Department</a>
-            <div className={styles.prices}>
-              <h5 className={styles.priceLeft}>$16.48</h5>
-              <h5 className={styles.priceRight}>$6.48</h5>
-            </div>
-          </div>
-        </div>
-        <div className={styles.item}>
-          <img src="/card-cover-8.svg" alt="img" />
-          <div className={styles.details}>
-            <h5>Graphic design</h5>
-            <a href="#">English Department</a>
-            <div className={styles.prices}>
-              <h5 className={styles.priceLeft}>$16.48</h5>
-              <h5 className={styles.priceRight}>$6.48</h5>
-            </div>
-          </div>
-        </div>
-        <div className={styles.item}>
-          <img src="/card-cover-8.svg" alt="img" />
-          <div className={styles.details}>
-            <h5>Graphic design</h5>
-            <a href="#">English Department</a>
-            <div className={styles.prices}>
-              <h5 className={styles.priceLeft}>$16.48</h5>
-              <h5 className={styles.priceRight}>$6.48</h5>
-            </div>
-          </div>
-        </div>
-        <div className={styles.item}>
-          <img src="/card-cover-8.svg" alt="img" />
-          <div className={styles.details}>
-            <h5>Graphic design</h5>
-            <a href="#">English Department</a>
-            <div className={styles.prices}>
-              <h5 className={styles.priceLeft}>$16.48</h5>
-              <h5 className={styles.priceRight}>$6.48</h5>
-            </div>
-          </div>
-        </div>
-        <div className={styles.item}>
-          <img src="/card-cover-8.svg" alt="img" />
-          <div className={styles.details}>
-            <h5>Graphic design</h5>
-            <a href="#">English Department</a>
-            <div className={styles.prices}>
-              <h5 className={styles.priceLeft}>$16.48</h5>
-              <h5 className={styles.priceRight}>$6.48</h5>
-            </div>
-          </div>
-        </div>
-        <div className={styles.item}>
-          <img src="/card-cover-8.svg" alt="img" />
-          <div className={styles.details}>
-            <h5>Graphic design</h5>
-            <a href="#">English Department</a>
-            <div className={styles.prices}>
-              <h5 className={styles.priceLeft}>$16.48</h5>
-              <h5 className={styles.priceRight}>$6.48</h5>
-            </div>
-          </div>
-        </div>
-        <div className={styles.item}>
-          <img src="/card-cover-8.svg" alt="img" />
-          <div className={styles.details}>
-            <h5>Graphic design</h5>
-            <a href="#">English Department</a>
-            <div className={styles.prices}>
-              <h5 className={styles.priceLeft}>$16.48</h5>
-              <h5 className={styles.priceRight}>$6.48</h5>
-            </div>
-          </div>
-        </div>
+        {data?.products.map((product) => (
+          <ProductItems key={product.id} product={product}/>
+        ))}
       </div>
       <div className={styles.btnDiv}>
         <Button className={styles.btnMD}>Load More Products</Button>
