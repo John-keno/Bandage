@@ -1,0 +1,78 @@
+.featContainer {
+  display: flex;
+  flex-direction: column;
+  padding: 112px 0 112px 0;
+  gap: 80px;
+}
+.title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  gap: 10px;
+}
+.title .blue {
+  color: var(--button-blue);
+}
+.postCard {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 348px));
+  gap: 30px;
+}
+.postCard > .item {
+  position: relative;
+  box-shadow: 0 2px #0000001a;
+}
+
+.postCard > .item > img {
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.postCard > .item > .tag {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  border-radius: 3px;
+  padding: 0 10px 0 10px;
+  background-color: #e74040;
+  box-shadow: 0 2px #0000001a;
+  color: white;
+}
+.postCard > .item > .tag > h6 {
+  text-align: center;
+}
+.postCard > .item > .itemDetails {
+  padding: 25px 25px 35px 25px;
+  gap: 10px;
+}
+
+.postCard > .item > .itemDetails > .itemSmall {
+  display: flex;
+  gap: 15px;
+  padding: 0;
+}
+.postCard > .item > .itemDetails > .itemSmall > .small {
+  padding: 0;
+}
+.postCard > .item > .itemDetails > .itemH4 {
+  text-align: left;
+}
+.postCard > .item > .itemDetails > .iconSmall {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 0;
+}
+
+.postCard > .item > .itemDetails > .iconSmall > .iconSmallItem {
+  display: flex;
+  gap: 5px;
+}
+
+.learnMore {
+  display: flex;
+  gap: 10px;
+}
+.learnMore > h6 {
+  color: var(--gray);
+}

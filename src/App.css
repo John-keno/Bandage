@@ -1,13 +1,28 @@
+h2 {
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 50px;
+  letter-spacing: 0.2px;
+  color: var(--yankee-blue);
+}
 h3 {
   font-size: 24px;
   font-weight: 700;
   line-height: 32px;
   letter-spacing: 0.1px;
+  color: var(--yankee-blue);
 }
 h4 {
   font-size: 20px;
   line-height: 30px;
   letter-spacing: 0.2px;
+}
+h5 {
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.1px;
+  font-weight: 700;
+  color: var(--yankee-blue);
 }
 h6 {
   font-size: 14px;
@@ -21,6 +36,7 @@ p {
   font-size: 14px;
   line-height: 20px;
   letter-spacing: 0.2px;
+  color: var(--gray);
 }
 .btnSM20 {
   display: flex;
@@ -85,6 +101,7 @@ small {
   font-weight: 400;
   letter-spacing: 0.2px;
   line-height: 16px;
+  font-size: 12px;
   text-align: center;
   padding: 5px;
 }
@@ -95,15 +112,30 @@ ul {
   list-style-type: none;
 }
 
+.container {
+  display: flex;
+  flex-direction: column;
+  padding: 80px 0 80px 0;
+  gap: 24px;
+}
+.container .title {
+  display: inline-flex;
+  width: 100%;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Section stylings */
 .hero {
-  margin-left: 147px;
-  margin-right: 147px;
+  position: relative;
+  margin: 0 147px;
   height: 776px;
   top: 4px;
 }
-
 .sectionProducts {
-  position: relative;
-  margin-left: 158px;
-  margin-right: 158px;
+  margin: 0 158px;
+}
+.sectionServices,
+.sectionFeatPost {
+  margin: 0 195px;
 }

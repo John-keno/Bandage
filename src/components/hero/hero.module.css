@@ -2,11 +2,14 @@
 .gridContainer {
   display: grid;
   height: 100%;
+  width: 100%;
   grid-template-areas:
     "left top top"
     "left bottom1 bottom2";
   gap: 10px;
   padding: 80px 0 80px 0;
+  grid-template-columns: 39.4% repeat(2, 29.4%);
+  grid-template-rows: repeat(2, 1fr);
 }
 .gridContainer > div {
     padding: 24px;
@@ -17,28 +20,39 @@
 }
 #img0 {
     grid-area: left;
-    background-image: url(/card-cover-5.svg);
+    background-image: url(/src/assets/card-cover-5.svg);
     background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
     
 }
 
 #img1 {
     grid-area: top;
-    background-image: url(/card-cover-6.svg);
+    background-image: url(/src/assets/card-cover-6.svg);
     background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
     
 }
 #img2{
     grid-area: bottom1;
-    background-image: url(/card-cover-7.svg);
+    background-image: url(/src/assets/card-cover-7.svg);
     background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
 }
 #img3{
     grid-area: bottom2;
-    background-image: url(/card-cover-8.svg);
+    background-image: url(/src/assets/card-cover-8.svg);
     background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
+}
+
+#img0 > h2, #img1 > h3, #img2 > h3, #img3 > h3 {
+    text-align: left;
+}
+.textBlue {
+    color: var(--yankee-blue);
 }

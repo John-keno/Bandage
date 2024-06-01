@@ -30,3 +30,7 @@ nav .listMenu {
 .btnSM20 {
   color: var(--button-blue);
 }
+
+.brand h3 {
+  color: var(--yankee-blue);
+}

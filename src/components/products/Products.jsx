@@ -1,22 +1,16 @@
 import { useState } from "react";
-import { useGetProductsQuery } from "../../features/service/dummyData";
+import { useGetProductsQuery } from "../../features/apiSlice/dummyData";
 import Button from "../ui/Button";
 import ProductItems from "./ProductItems";
 import styles from "./products.module.css";
 import { AnimatedLoading } from "../../icons/icons";
+import Container from "../ui/Container";
 export default function Products() {
   const [moreProduct, setMoreProducts] = useState(10);
   const { data, isError, isLoading, isFetching, refetch } =
     useGetProductsQuery(moreProduct);
-  // const [loadMoreProducts,] = useLazyGetProductsQuery();
-  console.log("response: ", data);
   return (
-    <div className={styles.container}>
-      <div className={styles.title}>
-        <h4>Featured Products</h4>
-        <h3>BESTSELLER PRODUCTS</h3>
-        <p>Problems trying to resolve the conflict between</p>
-      </div>
+    <Container title='BESTSELLER PRODUCTS'>
       <div className={styles.productCard}>
         {data?.products.map((product) => (
           <ProductItems key={product.id} product={product} />
@@ -43,7 +37,7 @@ export default function Products() {
                 refetch();
                 return;
               }
-              
+
               if (moreProduct + 30 > data?.total) {
                 setMoreProducts(data?.total);
               } else {
@@ -57,6 +51,6 @@ export default function Products() {
           <></>
         )}
       </div>
-    </div>
+    </Container>
   );
 }
