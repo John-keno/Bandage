@@ -1,6 +1,7 @@
 .featContainer {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   padding: 112px 0 112px 0;
   gap: 80px;
 }
@@ -16,12 +17,13 @@
 }
 .postCard {
   display: grid;
+  justify-content: center;
   grid-template-columns: repeat(3, minmax(0, 348px));
   gap: 30px;
 }
 .postCard > .item {
   position: relative;
-  box-shadow: 0 2px #0000001a;
+  box-shadow: 0 2px 5px#0000001a;
 }
 
 .postCard > .item > img {
@@ -35,8 +37,8 @@
   left: 20px;
   border-radius: 3px;
   padding: 0 10px 0 10px;
-  background-color: #e74040;
-  box-shadow: 0 2px #0000001a;
+  background-color: var(--cinnabar);
+  box-shadow: 0 2px 4px #0000001a;
   color: white;
 }
 .postCard > .item > .tag > h6 {
@@ -55,6 +57,10 @@
 .postCard > .item > .itemDetails > .itemSmall > .small {
   padding: 0;
 }
+.postCard > .item > .itemDetails > .itemSmall > .small1 {
+    color: #8EC2F2; /* TODO: set variable name*/
+    padding: 0;
+  }
 .postCard > .item > .itemDetails > .itemH4 {
   text-align: left;
 }
