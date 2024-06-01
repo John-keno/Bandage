@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import styles from "./featuredPost.module.css";
 import blogImg1 from "../../assets/blog-image-1.svg";
 import blogImg2 from "../../assets/blog-image-2.svg";
