@@ -49,7 +49,7 @@ export default function FeaturedPost() {
           <img src={blogImg2} alt="image" />
           <div className={styles.itemDetails}>
             <div className={styles.itemSmall}>
-              <small className={styles.small}>Google</small>
+              <small className={styles.small1}>Google</small>
               <small className={styles.small}>Trending</small>
               <small className={styles.small}>New</small>
             </div>
@@ -79,7 +79,7 @@ export default function FeaturedPost() {
           <img src={blogImg3} alt="image" />
           <div className={styles.itemDetails}>
             <div className={styles.itemSmall}>
-              <small className={styles.small}>Google</small>
+              <small className={styles.small1}>Google</small>
               <small className={styles.small}>Trending</small>
               <small className={styles.small}>New</small>
             </div>

@@ -5,8 +5,7 @@ import {
   PersonIcon,
   Search,
 } from "../../icons/icons";
-import Button from "../ui/Button";
-import styles from "./nav.module.css";
+import styles from "./navBar.module.css";
 export default function NavBar() {
   return (
     <nav className={styles.nav}>

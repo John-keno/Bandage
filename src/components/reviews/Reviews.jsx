@@ -15,7 +15,7 @@ export default function Reviews() {
             </div>
             <div className={styles.items} style={{ color: "var(--gray)" }}>
               <h6>
-                Slate helps you see how many more days you need to work to reach
+                Slate helps you see how many more days you need to<br></br> work to reach
                 your financial goal.
               </h6>
             </div>

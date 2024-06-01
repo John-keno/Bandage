@@ -10,7 +10,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 45%;
+  width: 50%;
   gap: 28px;
 }
 
@@ -46,7 +46,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 45%;
+  width: 50%;
 }
 
 .reviewsContainer > .cards > .reviewsCard2 > .items {

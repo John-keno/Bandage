@@ -56,20 +56,6 @@ p {
   display: flex;
   justify-content: center;
 }
-.btnMD {
-  color: var(--button-blue);
-  border: 1px solid var(--button-blue);
-  padding: 15px 40px 15px 40px;
-  background: transparent;
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 22px;
-  letter-spacing: 0.2px;
-}
-.btnMD:hover {
-  background-color: var(--btn-outline-hover);
-}
-
 .animatedLoading {
   display: flex;
   justify-content: center;

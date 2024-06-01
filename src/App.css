@@ -54,6 +54,35 @@ p {
   cursor: pointer;
 }
 
+.btnMD {
+  color: var(--button-blue);
+  border: 1px solid var(--button-blue);
+  padding: 15px 40px 15px 40px;
+  background: transparent;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 22px;
+  letter-spacing: 0.2px;
+}
+.btnMD:hover {
+  background-color: var(--btn-outline-hover);
+}
+
+.btnMDFilled {
+  color: white;
+  border: 1px solid var(--button-blue);
+  padding: 15px 40px 15px 40px;
+  background: var(--button-blue);
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 22px;
+  letter-spacing: 0.2px;
+}
+.btnMDFilled:hover {
+  background-color:#23a5f0da;
+}
+
+
 Button {
   border-radius: 5px;
   gap: 10px;
@@ -141,4 +170,13 @@ ul {
 }
 .sectionReviews {
   margin: 0 117px;
+}
+.sectionHeroBottom {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  background-image: url(/src/assets/bg-call-to-action.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }

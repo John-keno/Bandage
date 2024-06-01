@@ -30,7 +30,7 @@ export default function Products() {
       <div className={styles.btnDiv}>
         {moreProduct !== data?.total ? (
           <Button
-            className={styles.btnMD}
+            className='btnMD'
             disabled={isLoading || isFetching}
             onClick={() => {
               if (isError) {
