@@ -3,11 +3,19 @@ import styles from "./products.module.css";
 import PropTypes from "prop-types";
 import Button from "../ui/Button";
 import ReviewsStars from "../ui/ReviewsStars";
-import { ClipIcon, Search, WishlistIcon } from "../../icons/icons";
+import { ClipIcon, WishlistIcon } from "../../icons/icons";
 
 function ProductItems({ product }) {
-  const { id, images, title, category, price, discountPercentage, rating } =
-    product;
+  const {
+    id,
+    images,
+    title,
+    category,
+    price,
+    discountPercentage,
+    rating,
+    reviews,
+  } = product;
 
   function handleAddToCart(item) {
     console.log(item);
@@ -17,13 +25,12 @@ function ProductItems({ product }) {
       <Link className={styles.link} to={`/shop/product/${id}`}>
         <div className={styles.sideImgDiv}>
           <button className={styles.sideImgBtn}>
-            <ClipIcon/>
+            <ClipIcon />
           </button>
           <button className={styles.sideImgBtn}>
-            <WishlistIcon/>
+            <WishlistIcon />
           </button>
         </div>
-
         <div className={styles.perctoff}>{discountPercentage}%</div>
         <img src={images[0]} alt="product" />
         <div className={styles.details}>
@@ -37,8 +44,11 @@ function ProductItems({ product }) {
             </h5>
             <h5 className={styles.priceRight}>&#36;{price}</h5>
           </div>
-          <div style={{ textAlign: "left", paddingLeft: "15px" }}>
-            <ReviewsStars stars={Math.round(rating)} />{" "}
+          <div className={styles.stars}>
+            <ReviewsStars stars={Math.round(rating)} />
+            <span className={styles.revsnrates}>
+              {rating}&nbsp;({reviews.length})
+            </span>
           </div>
         </div>
       </Link>
@@ -65,6 +75,7 @@ ProductItems.propTypes = {
     price: PropTypes.number,
     discountPercentage: PropTypes.number,
     rating: PropTypes.number,
+    reviews: PropTypes.arrayOf(PropTypes.object),
   }),
 };
 

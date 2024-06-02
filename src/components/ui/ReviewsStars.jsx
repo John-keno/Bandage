@@ -1,16 +1,16 @@
 import PropTypes from "prop-types";
 import { StarFilled, StarOutline } from "../../icons/icons";
 function ReviewsStars(props) {
-  const { stars } = props;
+  const { stars, className } = props;
 
   return (
     <>
       {[...Array(stars)].map((u, i) => (
-        <StarFilled key={i} />
+        <StarFilled className={className} key={i} />
       ))}
 
       {[...Array(5 - stars)].map((u, i) => (
-        <StarOutline key={i} />
+        <StarOutline className={className} key={i} />
       ))}
     </>
   );
@@ -18,5 +18,6 @@ function ReviewsStars(props) {
 
 ReviewsStars.propTypes = {
   stars: PropTypes.number,
+  className: PropTypes.string,
 };
 export default ReviewsStars;
