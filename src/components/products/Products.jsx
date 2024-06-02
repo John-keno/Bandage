@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { PropTypes} from 'prop-types';
+import { PropTypes } from "prop-types";
 import { useGetProductsQuery } from "../../features/apiSlice/dummyData";
 import Button from "../ui/Button";
 import ProductItems from "./ProductItems";
@@ -14,9 +14,11 @@ function Products(props) {
   return (
     <Container title="BESTSELLER PRODUCTS">
       <div className={styles.productCard}>
-        {data?.products.map((product) => (
-          <ProductItems key={product.id} product={product} />
-        ))}
+        <div className={styles.itemCard}>
+          {data?.products.map((product) => (
+            <ProductItems key={product.id} product={product} />
+          ))}
+        </div>
       </div>
       {(isLoading || isFetching) && (
         <div className={styles.animatedLoading}>
@@ -30,7 +32,7 @@ function Products(props) {
         </div>
       )}
       <div className={styles.btnDiv}>
-        {(moreProduct !== data?.total) && showButton ? (
+        {moreProduct !== data?.total && showButton ? (
           <Button
             className="btnMD"
             disabled={isLoading || isFetching}

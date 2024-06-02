@@ -13,7 +13,7 @@ export default function App() {
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="product/:productId" element={<Product/>}/>
+        <Route path="/shop/product/:productId" element={<Product/>}/>
       </Routes>
       <Footer/>
     </BrowserRouter>
