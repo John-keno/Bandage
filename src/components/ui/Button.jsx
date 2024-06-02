@@ -1,10 +1,10 @@
 import PropTypes from "prop-types";
 
 function Button(props) {
-  const { children, className, onClick, disabled } = props;
+  const { children, className, style, onClick, disabled } = props;
 
   return (
-    <button className={className} onClick={onClick} disabled={disabled}>
+    <button className={className} style={style} onClick={onClick} disabled={disabled}>
       {children}
     </button>
   );
@@ -13,6 +13,7 @@ function Button(props) {
 Button.propTypes = {
   children: PropTypes.node,
   className: PropTypes.string,
+  style: PropTypes.object,
   onClick: PropTypes.func,
   disabled: PropTypes.bool,
 };

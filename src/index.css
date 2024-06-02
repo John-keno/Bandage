@@ -26,7 +26,7 @@
   --cinnabar: #e74040;
   --font-family-montserrat: "Montserrat", sans-serif;
   --transition-ease: all 300ms ease-in-out;
-  font-synthesis: none;
+  /* font-synthesis: none; */
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

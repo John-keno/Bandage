@@ -32,23 +32,23 @@ export default function Header() {
             <h6>Follow Us : </h6>
             <ul>
               <li>
-                <a href="#">
+                <a href="#" style={{color: 'white'}}>
                   <Instagram />
                 </a>
               </li>
               <li>
-                <a href="#">
+                <a href="#" style={{color: 'white'}}>
                   <Youtube />
                 </a>
               </li>
 
               <li>
-                <a href="#">
+                <a href="#" style={{color: 'white'}}>
                   <Facebook />
                 </a>
               </li>
               <li>
-                <a href="#">
+                <a href="#" style={{color: 'white'}}>
                   <Twitter />
                 </a>
               </li>

@@ -1,0 +1,61 @@
+footer > .footerContainer {
+  background-color: #fafafa;
+}
+
+footer > .footerContainer > .title {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 195px;
+  padding: 40px 0;
+}
+
+footer > .footerContainer > .title .icons {
+  display: flex;
+  color: var(--button-blue);
+  justify-content: center;
+  width: 25%;
+  gap: 20px;
+}
+footer > .footerContainer > .items {
+  display: flex;
+  background-color: white;
+}
+
+footer > .footerContainer > .items > .itemsContainer {
+  display: grid;
+  margin: 0 195px;
+  padding: 50px 0;
+  grid-template-columns: repeat(4, minmax(0, 152px)) repeat(1, minmax(0, 321px));
+  gap: 30px;
+}
+footer > .footerContainer > .items > .itemsContainer > .itemTitle {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+footer
+  > .footerContainer
+  > .items
+  > .itemsContainer
+  > .itemTitle
+  > .itemDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.subcribe {
+  display: flex;
+  width: 100%;
+  gap: -5px;
+}
+footer > .footerContainer > .bottomBanner {
+    display: flex;
+    margin: 0 195px;
+}
+footer > .footerContainer > .bottomBanner > .item {
+    padding: 25px 0;
+}
+footer .footerContainer > .title > svg {
+  color: var(--button-blue);
+}
