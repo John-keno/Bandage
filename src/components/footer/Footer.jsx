@@ -3,6 +3,11 @@ import Button from "../ui/Button";
 import Input from "../ui/Input";
 import styles from "./footer.module.css";
 export default function Footer() {
+  function handleSubmit(event) {
+    event.preventDefault();
+    event.target.reset(); // Clear the input value
+  }
+
   return (
     <footer>
       <div className={styles.footerContainer}>
@@ -99,7 +104,7 @@ export default function Footer() {
                 <h5>Get In Touch</h5>
               </div>
               <div>
-                <form className={styles.subcribe}>
+                <form className={styles.subcribe} onSubmit={handleSubmit}>
                   <Input
                     style={{ borderRadius: "5px 0 0 5px" }}
                     placeholder="Your Email"
@@ -118,7 +123,9 @@ export default function Footer() {
         </section>
         <section className={styles.bottomBanner}>
           <div className={styles.item}>
-            <h6 style={{color : 'var(--gray)'}}>Made With Love and Passion By Johkode All Right Reserved </h6>
+            <h6 style={{ color: "var(--gray)" }}>
+              Made With Love and Passion By Johkode All Right Reserved{" "}
+            </h6>
           </div>
         </section>
       </div>

@@ -1,13 +1,14 @@
 import PropTypes from "prop-types";
 
 function Input(props) {
-  const { type, defaultValue, onChange, placeholder, label, style, className } =
+  const { id, type, defaultValue, onChange, placeholder, label, style, className } =
     props;
   return (
     <label>
       {label}
       <input
         type={type}
+        id={id}
         defaultValue={defaultValue}
         placeholder={placeholder}
         onChange={onChange}
@@ -18,6 +19,7 @@ function Input(props) {
   );
 }
 Input.propTypes = {
+  id: PropTypes.string,
   label: PropTypes.string,
   type: PropTypes.string,
   value: PropTypes.string,
