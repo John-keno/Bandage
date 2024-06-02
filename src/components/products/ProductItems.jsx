@@ -1,10 +1,11 @@
+import { Link } from "react-router-dom";
 import styles from "./products.module.css";
 import PropTypes from "prop-types";
 
 function ProductItems({ product }) {
-  const { images, title, category, price, discountPercentage } = product;
+  const { id ,images, title, category, price, discountPercentage } = product;
   return (
-    <div className={styles.item}>
+    <Link to={`/product/${id}`} className={styles.item}>
       <img src={images[0]} alt="product" />
       <div className={styles.details}>
         <h5>{title}</h5>
@@ -17,12 +18,13 @@ function ProductItems({ product }) {
           <h5 className={styles.priceRight}>${price}</h5>
         </div>
       </div>
-    </div>
+    </Link>
   );
 }
 
 ProductItems.propTypes = {
   product: PropTypes.shape({
+    id:PropTypes.number,
     images: PropTypes.any,
     title: PropTypes.string,
     category: PropTypes.string,

@@ -1,16 +1,18 @@
 import { useState } from "react";
+import { PropTypes} from 'prop-types';
 import { useGetProductsQuery } from "../../features/apiSlice/dummyData";
 import Button from "../ui/Button";
 import ProductItems from "./ProductItems";
 import styles from "./products.module.css";
 import { AnimatedLoading } from "../../icons/icons";
 import Container from "../ui/Container";
-export default function Products() {
+function Products(props) {
+  const { showButton } = props;
   const [moreProduct, setMoreProducts] = useState(10);
   const { data, isError, isLoading, isFetching, refetch } =
     useGetProductsQuery(moreProduct);
   return (
-    <Container title='BESTSELLER PRODUCTS'>
+    <Container title="BESTSELLER PRODUCTS">
       <div className={styles.productCard}>
         {data?.products.map((product) => (
           <ProductItems key={product.id} product={product} />
@@ -28,9 +30,9 @@ export default function Products() {
         </div>
       )}
       <div className={styles.btnDiv}>
-        {moreProduct !== data?.total ? (
+        {(moreProduct !== data?.total) && showButton ? (
           <Button
-            className='btnMD'
+            className="btnMD"
             disabled={isLoading || isFetching}
             onClick={() => {
               if (isError) {
@@ -54,3 +56,9 @@ export default function Products() {
     </Container>
   );
 }
+
+Products.propTypes = {
+  showButton: PropTypes.bool,
+};
+
+export default Products;

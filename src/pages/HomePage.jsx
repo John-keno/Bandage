@@ -12,7 +12,7 @@ export default function HomePage() {
         <Hero />
       </section>
       <section className="sectionProducts">
-        <Products />
+        <Products showButton />
       </section>
       <section className="sectionServices">
         <Services />
