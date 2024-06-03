@@ -1,0 +1,60 @@
+.reviewsContainer {
+  padding: 80px 0;
+}
+.reviewsContainer > .cards {
+  display: flex;
+  padding: 48px;
+  justify-content: space-between;
+}
+.reviewsContainer > .cards .reviewsCard1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 50%;
+  gap: 28px;
+}
+
+.reviewsContainer > .cards > .reviewsCard1 > .title {
+  text-align: center;
+}
+
+.reviewsContainer > .cards > .reviewsCard1 > .card1Items {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 30px 35px;
+  border-radius: 5px;
+  gap: 20px;
+}
+
+.reviewsContainer > .cards > .reviewsCard1 > .card1Items > .items {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  text-align: center;
+  color: #F3CD03;
+}
+
+.reviewsContainer > .cards > .reviewsCard1 > .card1Items > .items > img {
+  border-radius: 50%;
+  width: 90px;
+  height: 90px;
+  object-fit: cover;
+  border: 1.8px solid var(--light-gray);
+}
+
+.reviewsContainer > .cards .reviewsCard2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 50%;
+}
+
+.reviewsContainer > .cards > .reviewsCard2 > .items {
+  display: grid;
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(3, minmax(0, 142.77px));
+  grid-template-rows: repeat(3, minmax(0, 142.77px));
+  gap: 20px;
+}

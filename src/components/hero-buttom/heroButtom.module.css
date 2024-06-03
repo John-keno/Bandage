@@ -1,0 +1,17 @@
+.heroBottomContainer {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 160px 0 112px 0;
+  margin: 0 195px;
+  gap: 24px;
+}
+
+.heroBottomContainer > .heroBottomCard {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 36px;
+}
+
+

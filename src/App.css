@@ -1,42 +1,259 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+h2 {
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 50px;
+  letter-spacing: 0.2px;
+  color: var(--yankee-blue);
+}
+h3 {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 32px;
+  letter-spacing: 0.1px;
+  color: var(--yankee-blue);
+}
+h4 {
+  font-size: 20px;
+  line-height: 30px;
+  letter-spacing: 0.2px;
+}
+h5 {
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.1px;
+  font-weight: 700;
+  color: var(--yankee-blue);
+}
+h6 {
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.2px;
+  font-weight: 700;
+}
+
+p {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.2px;
+  color: var(--gray);
+}
+.btnSM20 {
+  display: flex;
+  padding: 15px;
+  gap: 5px;
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 0.2px;
+  line-height: 24px;
   text-align: center;
+  color: var(--button-blue);
+  outline: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+.btnMD {
+  color: var(--button-blue);
+  border: 1px solid var(--button-blue);
+  padding: 15px 40px 15px 40px;
+  background: transparent;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 22px;
+  letter-spacing: 0.2px;
 }
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.btnMD:hover {
+  background-color: var(--btn-outline-hover);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.btnMDFilled {
+  color: white;
+  border: 1px solid var(--button-blue);
+  padding: 15px 40px 15px 40px;
+  background: var(--button-blue);
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 22px;
+  letter-spacing: 0.2px;
+}
+.btnMDFilled:hover {
+  background-color:#23a5f0da;
 }
 
-.card {
-  padding: 2em;
+
+Button {
+  border-radius: 5px;
+  border: 1px solid var(--button-blue);
+  background-color: var(--button-blue);
+  color: white;
+  font-size: 14px;
+  line-height: 28px;
+  letter-spacing: 0.2px;
+  font-weight: 400;
+  padding: 10px 20px;
+  gap: 10px;
+  cursor: pointer;
+}
+Input {
+  font-size: 14px;
+  line-height: 28px;
+  font-weight: 400;
+  letter-spacing: 0.2px;
+  padding: 10px 20px;
+  border: 1px solid var(--light-gray);
+  border-radius: 5px;
+
+  color: var(--gray);
+}
+Button:disabled {
+  cursor: not-allowed;
+  opacity: 0.7;
+  background-color: #ccc; /* Grayed-out appearance */
+  color: #888; /* Text color */
+  border: 1px solid #aaa; /* Border style */
 }
 
-.read-the-docs {
-  color: #888;
+svg {
+  width: 16px;
+  height: 16px;
+  margin-top: 5px;
+}
+a {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: 0.2px;
+  text-decoration: none;
+}
+ul li a {
+  letter-spacing: 0.2px;
+  text-align: center;
+  line-height: 24px;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--gray);
+}
+
+svg {
+  width: 16px;
+  height: 16px;
+  margin-top: 5px;
+}
+
+small {
+  display: flex;
+  font-weight: 400;
+  letter-spacing: 0.2px;
+  line-height: 16px;
+  font-size: 12px;
+  text-align: center;
+  padding: 5px;
+}
+
+ul {
+  display: flex;
+  gap: 15px;
+  list-style-type: none;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  padding: 80px 0 80px 0;
+  gap: 24px;
+}
+.container .title {
+  display: inline-flex;
+  width: 100%;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Section stylings */
+.hero {
+  position: relative;
+  margin: 0 147px;
+  height: 776px;
+  top: 4px;
+}
+.sectionProducts {
+  margin: 0 158px;
+}
+.sectionServices,
+.sectionFeatPost {
+  margin: 0 195px;
+}
+.sectionReviews {
+  margin: 0 117px;
+}
+.sectionHeroBottom {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  background-image: url(/src/assets/bg-call-to-action.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.sectionPdDetails {
+  margin: 0 195px;
+}
+
+/* for carousel */
+.carousel{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  gap: 30px;
+  
+}
+
+.btnCarousel {
+  display: flex;
+  padding: 15px;
+  gap: 5px;
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 0.2px;
+  line-height: 24px;
+  text-align: center;
+  outline: 0;
+  border: none;
+  border-radius: 50%;
+  background-color: transparent;
+  color: var(--yankee-blue);
+  box-shadow: 0 8px 20px #0000001a;
+  cursor: pointer;
+}
+.carouselDisplayImg{
+  width: 506px;
+  height: 450px;
+  object-fit: contain;
+}
+
+
+.chevronRight, .chevronLeft {
+  position: absolute;
+}
+.chevronRight {
+  right: 0;
+  top: 200px;
+}
+.chevronLeft{
+  top: 200px;
+}
+.carouselOptions {
+  display: flex;
+  gap: 20px;
+}
+.carouselOptions img {
+  width: 100px;
+  height: 75px;
+  object-fit: cover;
+  object-position: center;
 }

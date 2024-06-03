@@ -1,0 +1,15 @@
+.cards {
+  display: grid;
+  justify-content: center;
+  text-align: center;
+  grid-template-columns: repeat(3, minmax(0, 328px));
+  gap: 30px;
+}
+.item {
+    padding: 35px 40px 35px 40px;
+}
+
+.item > svg {
+    width: 72px;
+    height: 72px;
+}
