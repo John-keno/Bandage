@@ -114,7 +114,7 @@ export default function Footer() {
                     Subscribe
                   </Button>
                 </form>
-                <small style={{ color: "var(--gray)" }}>
+                <small style={{ color: "var(--gray)", textAlign: 'left', fontSize: '10px' }}>
                   Lore imp sum dolor Amit
                 </small>
               </div>

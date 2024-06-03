@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { PropTypes } from "prop-types";
 import { useGetProductsQuery } from "../../features/apiSlice/dummyData";
 import Button from "../ui/Button";
@@ -7,12 +7,21 @@ import styles from "./products.module.css";
 import { AnimatedLoading } from "../../icons/icons";
 import Container from "../ui/Container";
 function Products(props) {
-  const { showButton } = props;
+  const { showButton, hideDefaults, style } = props;
+  const [showTitle, setShowTitle] = useState(false);
   const [moreProduct, setMoreProducts] = useState(10);
   const { data, isError, isLoading, isFetching, refetch } =
     useGetProductsQuery(moreProduct);
+  useEffect(() => {
+    if (hideDefaults) {
+      setShowTitle(false);
+    } else {
+      setShowTitle(true);
+    }
+    console.log(data?.products)
+  }, [hideDefaults, data]);
   return (
-    <Container title="BESTSELLER PRODUCTS">
+    <Container title="BESTSELLER PRODUCTS" style={style} showDefaults={showTitle}>
       <div className={styles.productCard}>
         <div className={styles.itemCard}>
           {data?.products.map((product) => (
@@ -61,6 +70,8 @@ function Products(props) {
 
 Products.propTypes = {
   showButton: PropTypes.bool,
+  hideDefaults: PropTypes.bool,
+  style: PropTypes.string,
 };
 
 export default Products;

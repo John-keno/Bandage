@@ -4,6 +4,8 @@ import PropTypes from "prop-types";
 import Button from "../ui/Button";
 import ReviewsStars from "../ui/ReviewsStars";
 import { ClipIcon, WishlistIcon } from "../../icons/icons";
+import { useDispatch } from "react-redux";
+import { addToCart, clearCart } from "../../features/slices/CartSlice";
 
 function ProductItems({ product }) {
   const {
@@ -15,14 +17,20 @@ function ProductItems({ product }) {
     discountPercentage,
     rating,
     reviews,
+    availabilityStatus,
+    stock,
   } = product;
+
+  const dispatch = useDispatch();
 
   function handleAddToCart(item) {
     console.log(item);
+    dispatch(addToCart(product))
   }
   return (
     <div className={styles.item}>
       <Link className={styles.link} to={`/shop/product/${id}`}>
+      {(stock == 0) && <div className={styles.outOfStock}>{availabilityStatus}</div>}
         <div className={styles.sideImgDiv}>
           <button className={styles.sideImgBtn}>
             <ClipIcon />
@@ -76,6 +84,8 @@ ProductItems.propTypes = {
     discountPercentage: PropTypes.number,
     rating: PropTypes.number,
     reviews: PropTypes.arrayOf(PropTypes.object),
+    availabilityStatus: PropTypes.string,
+    stock: PropTypes.string,
   }),
 };
 

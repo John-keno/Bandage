@@ -198,3 +198,62 @@ ul {
   background-repeat: no-repeat;
   background-size: cover;
 }
+.sectionPdDetails {
+  margin: 0 195px;
+}
+
+/* for carousel */
+.carousel{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  gap: 30px;
+  
+}
+
+.btnCarousel {
+  display: flex;
+  padding: 15px;
+  gap: 5px;
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 0.2px;
+  line-height: 24px;
+  text-align: center;
+  outline: 0;
+  border: none;
+  border-radius: 50%;
+  background-color: transparent;
+  color: var(--yankee-blue);
+  box-shadow: 0 8px 20px #0000001a;
+  cursor: pointer;
+}
+.carouselDisplayImg{
+  width: 506px;
+  height: 450px;
+  object-fit: contain;
+}
+
+
+.chevronRight, .chevronLeft {
+  position: absolute;
+}
+.chevronRight {
+  right: 0;
+  top: 200px;
+}
+.chevronLeft{
+  top: 200px;
+}
+.carouselOptions {
+  display: flex;
+  gap: 20px;
+}
+.carouselOptions img {
+  width: 100px;
+  height: 75px;
+  object-fit: cover;
+  object-position: center;
+}

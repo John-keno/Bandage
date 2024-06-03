@@ -37,7 +37,9 @@ export default function FeaturedPost() {
             </div>
             <div className={styles.learnMore}>
               <h6>Learn More</h6>
-              <ChevronRight />
+              <div style={{ color: "var(--button-blue)" }}>
+                <ChevronRight />
+              </div>
             </div>
           </div>
         </div>
@@ -67,7 +69,9 @@ export default function FeaturedPost() {
             </div>
             <div className={styles.learnMore}>
               <h6>Learn More</h6>
-              <ChevronRight />
+              <div style={{ color: "var(--button-blue)" }}>
+                <ChevronRight />
+              </div>
             </div>
           </div>
         </div>
@@ -97,7 +101,9 @@ export default function FeaturedPost() {
             </div>
             <div className={styles.learnMore}>
               <h6>Learn More</h6>
-              <ChevronRight />
+              <div style={{ color: "var(--button-blue)" }}>
+                <ChevronRight />
+              </div>
             </div>
           </div>
         </div>

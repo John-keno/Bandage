@@ -4,7 +4,7 @@ import { BookWithDot, CarbonBook, GrowthArrow } from "../../icons/icons";
 
 export default function Services() {
   return (
-    <Container title="THE BEST SERVICES">
+    <Container title="THE BEST SERVICES" showDefaults>
       <div className={styles.cards}>
         <div className={styles.item}>
           <BookWithDot />

@@ -21,7 +21,7 @@ export default function Header() {
           </button>
           <button className={`${styles.container} ${styles.btnSM20}`}>
             <Email />
-            <h6>michelle.rivera@example.com</h6>
+            <h6>iweh.john@example.com</h6>
           </button>
         </div>
         <div>

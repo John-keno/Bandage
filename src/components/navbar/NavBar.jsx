@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import {
   Cart,
   ChevronDown,
@@ -6,7 +7,11 @@ import {
   Search,
 } from "../../icons/icons";
 import styles from "./navBar.module.css";
+import { useSelector } from "react-redux";
 export default function NavBar() {
+
+  const { amount } = useSelector((state) => state.cart);
+
   return (
     <nav className={styles.nav}>
       <div className={styles.brand}>
@@ -15,7 +20,7 @@ export default function NavBar() {
       <div className={styles.listMenu}>
         <ul>
           <li>
-            <a href="#">Home</a>
+            <a href="/">Home</a>
           </li>
           <li>
             <button className={styles.btnSM20} style={{ padding: "0px" }}>
@@ -25,9 +30,7 @@ export default function NavBar() {
               <ChevronDown />
             </button>
             <div className={styles.dropdownContent}>
-              <a href="#">Link 1</a>
-              <a href="#">Link 2</a>
-              <a href="#">Link 3</a>
+              <Link to="/shop/cart">Cart</Link>
             </div>
           </li>
           <li>
@@ -62,10 +65,10 @@ export default function NavBar() {
               </a>
             </li>
             <li>
-              <a href="#">
+              <a href="/shop/cart">
                 <button className={styles.btnSM20}>
                   <Cart />
-                  <small>1</small>
+                  <small>{amount}</small>
                 </button>
               </a>
             </li>
