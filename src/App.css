@@ -257,3 +257,16 @@ ul {
   object-fit: cover;
   object-position: center;
 }
+
+.pdheader {
+  display: flex;
+  width: 100%;
+  padding: 24px 0px;
+  background-color: #fafafa;
+}
+
+.pdheadercontainer {
+  display: flex;
+  margin: 0 195px;
+  gap: 30px;
+}
