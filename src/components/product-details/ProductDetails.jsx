@@ -34,6 +34,7 @@ function ProductDetails(props) {
             </span>
           </div>
           <div className={styles.line}></div>
+          <div></div>
         </div>
       </div>
     </div>
