@@ -18,6 +18,6 @@ Container.propTypes = {
   children: PropTypes.node,
   title: PropTypes.string,
   showDefaults: PropTypes.bool,
-  style: PropTypes.string,
+  style: PropTypes.object,
 };
 export default Container;
