@@ -71,7 +71,7 @@ function Products(props) {
 Products.propTypes = {
   showButton: PropTypes.bool,
   hideDefaults: PropTypes.bool,
-  style: PropTypes.string,
+  style: PropTypes.object,
 };
 
 export default Products;

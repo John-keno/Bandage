@@ -85,7 +85,7 @@ ProductItems.propTypes = {
     rating: PropTypes.number,
     reviews: PropTypes.arrayOf(PropTypes.object),
     availabilityStatus: PropTypes.string,
-    stock: PropTypes.string,
+    stock: PropTypes.number,
   }),
 };
 
