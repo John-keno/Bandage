@@ -1,6 +1,7 @@
 import { Link, useParams } from "react-router-dom";
 import Products from "../components/products/Products";
 import ProductDetails from "../components/product-details/ProductDetails";
+import Brands from "../components/brands/Brands";
 import { ChevronRight } from "../icons/icons";
 
 export default function ProductPage() {
@@ -32,6 +33,7 @@ export default function ProductPage() {
       <section className="sectionProducts" >
         <Products style={{ textAlign: "left" }} hideDefaults />
       </section>
+      <Brands/>
     </>
   );
 }
