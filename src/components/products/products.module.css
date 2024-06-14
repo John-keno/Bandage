@@ -72,6 +72,11 @@
   color: var(--celadon-Green);
 }
 
+.item:hover{
+  transform: scale(1.05);
+  transition: 0.3s ease;
+}
+
 .item:hover .priceLeft {
   display: flex;
   text-decoration: line-through;
@@ -180,12 +185,19 @@ p {
 .outOfStock {
   position: absolute;
   display: none;
-  background-color: #1b1b1b;
+  justify-content: center;
+  width: 100%;
+  padding: 0 30%;
   color: #fff;
   padding: 4px 8px;
   font-weight: 700;
   font-size: 14px;
   line-height: 20px;
-  top: -120px;
-  left: 45px;
+  top: 30%;
+  z-index: 1;
+}
+
+.outOfStock .item {
+  background-color: #1b1b1b;
+  padding: 5px;
 }

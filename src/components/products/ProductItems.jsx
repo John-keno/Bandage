@@ -25,12 +25,18 @@ function ProductItems({ product }) {
 
   function handleAddToCart(item) {
     console.log(item);
-    dispatch(addToCart(product))
+    dispatch(addToCart(product));
   }
   return (
     <div className={styles.item}>
+      {stock == 0 && (
+        <div className={styles.outOfStock}>
+          <div className={styles.item}>
+            {availabilityStatus}
+          </div>
+        </div>
+      )}
       <Link className={styles.link} to={`/shop/product/${id}`}>
-      {(stock == 0) && <div className={styles.outOfStock}>{availabilityStatus}</div>}
         <div className={styles.sideImgDiv}>
           <button className={styles.sideImgBtn}>
             <ClipIcon />
