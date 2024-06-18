@@ -194,10 +194,11 @@ p {
   font-size: 14px;
   line-height: 20px;
   top: 30%;
-  z-index: 1;
+  
 }
 
 .outOfStock .item {
   background-color: #1b1b1b;
   padding: 5px;
+  z-index: 1;
 }

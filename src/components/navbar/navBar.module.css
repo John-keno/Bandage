@@ -4,7 +4,6 @@ nav {
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  height: 58px;
   padding-top: 10px;
   padding-left: 38px;
 }
@@ -17,6 +16,16 @@ nav .brand {
   padding-right: 16px;
 }
 
+nav .brand ul {
+  display: none;
+}
+
+nav .navSmallItems {
+  display: flex;
+  line-height: 30px;
+  letter-spacing: 0.2px;
+}
+
 nav .listMenu {
   display: flex;
   justify-content: space-between;
@@ -24,13 +33,17 @@ nav .listMenu {
   width: 100%;
 }
 .ulButton {
+  display: flex;
   gap: 0;
 }
 
 .btnSM20 {
   color: var(--button-blue);
 }
-
+.navBtn {
+  padding: 3px;
+  color: var(--yankee-blue);
+}
 .brand h3 {
   color: var(--yankee-blue);
 }
@@ -59,4 +72,78 @@ nav .listMenu {
 
 li:hover > .dropdownContent {
   display: block;
+}
+.hamburger {
+  position: relative;
+  background: transparent;
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  appearance: none;
+  border: none;
+  scale: 0.9;
+  display: block;
+  cursor: pointer;
+}
+
+.bar,
+.hamburger::after,
+.hamburger::before {
+  content: "";
+  display: block;
+  background: black;
+  width: 100%;
+  height: 3px;
+  margin: 6px 0;
+  transition: 0.5s;
+}
+.hamburger.active::before {
+  transform: translateY(10px) rotate(45deg);
+}
+
+.hamburger.active::after {
+  transform: translateY(-10px) rotate(-45deg);
+}
+.hamburger.active .bar {
+  opacity: 0;
+}
+@media screen and (max-width: 992px) {
+  nav {
+    display: block;
+    padding: 10px 30px;
+  }
+  nav .brand ul {
+    display: flex;
+  }
+  nav .brand {
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  nav .ulButton ul {
+    display: none;
+  }
+  nav .listMenu.notActive {
+    display: flex;
+    position: absolute;
+    transform: translateY(-200%);
+    transition: all 0.5s ease;
+  }
+  nav .listMenu.active {
+    display: flex;
+    position: relative;
+    flex-direction: column-reverse;
+    transform: translateY(0);
+    padding: 50px 0;
+    line-height: 45px;
+    transition: all 1s ease;
+    width: 100%;
+  }
+  nav .listMenu ul {
+    align-items: center;
+    width: 100%;
+    text-align: center;
+    flex-direction: column;
+  }
 }

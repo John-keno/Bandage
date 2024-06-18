@@ -110,7 +110,7 @@ export default function Footer() {
                     placeholder="Your Email"
                     type="email"
                   />
-                  <Button type="submit" style={{ borderRadius: "0 5px 5px 0" }}>
+                  <Button type="submit" style={{ borderRadius: "0 5px 5px 0", padding: '10px' }}>
                     Subscribe
                   </Button>
                 </form>
