@@ -90,10 +90,11 @@ li:hover > .dropdownContent {
 .hamburger::after,
 .hamburger::before {
   content: "";
+  border-radius: 4px;
   display: block;
   background: black;
   width: 100%;
-  height: 3px;
+  height: 4px;
   margin: 6px 0;
   transition: 0.5s;
 }
@@ -110,7 +111,7 @@ li:hover > .dropdownContent {
 @media screen and (max-width: 992px) {
   nav {
     display: block;
-    padding: 10px 30px;
+    padding: 10px 40px;
   }
   nav .brand ul {
     display: flex;
