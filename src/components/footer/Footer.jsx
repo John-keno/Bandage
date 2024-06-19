@@ -124,7 +124,7 @@ export default function Footer() {
         <section className={styles.bottomBanner}>
           <div className={styles.item}>
             <h6 style={{ color: "var(--gray)" }}>
-              Made With Love and Passion By Johkode All Right Reserved{" "}
+              Made With Love and Passion By Johkode <br /> All Right Reserved{" "}
             </h6>
           </div>
         </section>

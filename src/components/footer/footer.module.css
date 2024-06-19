@@ -69,4 +69,25 @@ footer .footerContainer > .title > svg {
   footer > .footerContainer > .title h3{
     text-align: left;
   }
+  footer > .footerContainer > .title .icons {
+    display: inline-flex;
+    justify-content: unset;
+    width: 100%;
+  }
+  footer > .footerContainer > .items > .itemsContainer {
+    margin: 0 46px;
+    padding: 70px 0;
+    grid-template-columns: repeat(1, minmax(0, 100%));
+  }
+
+  footer > .footerContainer > .bottomBanner {
+    display: flex;
+    margin: 0;
+    width: 100%;
+    text-align: center;
+}
+.bottomBanner .item{
+  width: 100%;
+  justify-content: center;
+}
 }

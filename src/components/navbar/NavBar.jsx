@@ -36,7 +36,7 @@ export default function NavBar() {
           </li>
           <li>
             <button
-              className={[styles.hamburger, `${toggleNavMenu ? styles.notActive : styles.active}`].join(" ") }
+              className={[styles.hamburger, `${toggleNavMenu ? styles.active : styles.notActive}`].join(" ") }
               onClick={() => setToggleNavMenu(!toggleNavMenu)}
             >
               <div className={styles.bar}></div>
@@ -46,7 +46,7 @@ export default function NavBar() {
       </div>
 
       <div
-        className={[styles.listMenu, `${toggleNavMenu ? styles.notActive : styles.active}`].join(
+        className={[styles.listMenu, `${toggleNavMenu ? styles.active : styles.notActive}`].join(
           " "
         )}
       >

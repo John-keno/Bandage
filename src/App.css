@@ -100,7 +100,7 @@ Input {
   line-height: 28px;
   font-weight: 400;
   letter-spacing: 0.2px;
-  padding: 10px 20px;
+  padding: 10px 10px;
   border: 1px solid var(--light-gray);
   border-radius: 5px;
 
@@ -191,7 +191,6 @@ ul {
 .sectionHeroBottom {
   display: flex;
   justify-content: center;
-  width: 100%;
   background-image: url(/src/assets/bg-call-to-action.svg);
   background-position: center;
   background-repeat: no-repeat;
