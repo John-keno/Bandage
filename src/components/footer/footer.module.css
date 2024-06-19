@@ -59,3 +59,14 @@ footer > .footerContainer > .bottomBanner > .item {
 footer .footerContainer > .title > svg {
   color: var(--button-blue);
 }
+
+@media screen and (max-width: 992px) {
+  footer > .footerContainer > .title {
+    flex-direction: column;
+    margin: 0 44px;
+    gap: 11.5px;
+  }
+  footer > .footerContainer > .title h3{
+    text-align: left;
+  }
+}
