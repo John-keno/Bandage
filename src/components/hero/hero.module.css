@@ -64,8 +64,8 @@
       "top"
       "bottom1"
       "bottom2";
-      grid-template-columns: unset;
-      grid-template-rows: repeat(4 , minmax(0, 300px));
+      grid-template-columns: repeat(1, minmax(344px, 100%));
+      grid-template-rows: repeat(4 , minmax(300px, 400px));
       padding: 24px 0;
   }
 }
