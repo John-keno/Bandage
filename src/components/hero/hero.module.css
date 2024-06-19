@@ -68,4 +68,9 @@
       grid-template-rows: repeat(4 , minmax(300px, 400px));
       padding: 24px 0;
   }
+  #img0 h2{
+    font-size: 24px;
+    letter-spacing: 0.1px;
+    line-height: 32px;
+  }
 }
