@@ -25,12 +25,18 @@ function ProductItems({ product }) {
 
   function handleAddToCart(item) {
     console.log(item);
-    dispatch(addToCart(product))
+    dispatch(addToCart(product));
   }
   return (
     <div className={styles.item}>
+      {stock == 0 && (
+        <div className={styles.outOfStock}>
+          <div className={styles.item}>
+            {availabilityStatus}
+          </div>
+        </div>
+      )}
       <Link className={styles.link} to={`/shop/product/${id}`}>
-      {(stock == 0) && <div className={styles.outOfStock}>{availabilityStatus}</div>}
         <div className={styles.sideImgDiv}>
           <button className={styles.sideImgBtn}>
             <ClipIcon />
@@ -42,12 +48,12 @@ function ProductItems({ product }) {
         <div className={styles.perctoff}>{discountPercentage}%</div>
         <img src={images[0]} alt="product" />
         <div className={styles.details}>
-          <h5 style={{ textAlign: "left", paddingLeft: "15px" }}>{title}</h5>
-          <div style={{ textAlign: "left", paddingLeft: "15px" }}>
+          <h5>{title}</h5>
+          <div>
             {category}
           </div>
           <div className={styles.prices}>
-            <h5 id={styles.hDisc} className={styles.priceLeft}>
+            <h5 className={styles.priceLeft}>
               &#36;{`${(price / (1 - discountPercentage / 100)).toFixed(2)}`}
             </h5>
             <h5 className={styles.priceRight}>&#36;{price}</h5>

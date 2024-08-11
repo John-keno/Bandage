@@ -20,7 +20,7 @@ export default function HeroBottom() {
         <div>
           <h3 style={{color: 'var(--celadon-Green)'}}>$16.48</h3>
         </div>
-        <div >
+        <div style={{display: 'flex', justifyContent: 'center'}}>
           <Button className='btnMDFilled'>ADD YOUR CALL TO ACTION</Button>
         </div>
       </div>

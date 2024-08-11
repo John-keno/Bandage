@@ -79,9 +79,8 @@ p {
   letter-spacing: 0.2px;
 }
 .btnMDFilled:hover {
-  background-color:#23a5f0da;
+  background-color: #23a5f0da;
 }
-
 
 Button {
   border-radius: 5px;
@@ -101,7 +100,7 @@ Input {
   line-height: 28px;
   font-weight: 400;
   letter-spacing: 0.2px;
-  padding: 10px 20px;
+  padding: 10px 10px;
   border: 1px solid var(--light-gray);
   border-radius: 5px;
 
@@ -162,7 +161,7 @@ ul {
 .container {
   display: flex;
   flex-direction: column;
-  padding: 80px 0 80px 0;
+  padding: 80px 0;
   gap: 24px;
 }
 .container .title {
@@ -192,7 +191,6 @@ ul {
 .sectionHeroBottom {
   display: flex;
   justify-content: center;
-  width: 100%;
   background-image: url(/src/assets/bg-call-to-action.svg);
   background-position: center;
   background-repeat: no-repeat;
@@ -203,14 +201,13 @@ ul {
 }
 
 /* for carousel */
-.carousel{
+.carousel {
   position: relative;
   display: flex;
   flex-direction: column;
   width: 100%;
   height: 100%;
   gap: 30px;
-  
 }
 
 .btnCarousel {
@@ -230,21 +227,21 @@ ul {
   box-shadow: 0 8px 20px #0000001a;
   cursor: pointer;
 }
-.carouselDisplayImg{
+.carouselDisplayImg {
   width: 506px;
   height: 450px;
   object-fit: contain;
 }
 
-
-.chevronRight, .chevronLeft {
+.chevronRight,
+.chevronLeft {
   position: absolute;
 }
 .chevronRight {
   right: 0;
   top: 200px;
 }
-.chevronLeft{
+.chevronLeft {
   top: 200px;
 }
 .carouselOptions {
@@ -269,4 +266,17 @@ ul {
   display: flex;
   margin: 0 195px;
   gap: 30px;
+}
+
+@media screen and (max-width: 992px) {
+  .hero {
+    margin: 0 41px;
+    height: unset;
+  }
+  .sectionProducts,
+  .sectionServices,
+  .sectionFeatPost,
+  .sectionReviews {
+    margin: 0 35.5px;
+  }
 }

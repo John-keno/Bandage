@@ -82,3 +82,9 @@
 .learnMore > h6 {
   color: var(--gray);
 }
+
+@media screen and (max-width:992px) {
+  .postCard {
+    grid-template-columns: repeat(1, minmax(0, 348px));
+  }
+}

@@ -5,19 +5,51 @@ import {
   Heart,
   PersonIcon,
   Search,
+  ShoppingCart,
 } from "../../icons/icons";
 import styles from "./navBar.module.css";
 import { useSelector } from "react-redux";
+import { useState } from "react";
 export default function NavBar() {
-
   const { amount } = useSelector((state) => state.cart);
+  const [toggleNavMenu, setToggleNavMenu] = useState(false);
 
   return (
-    <nav className={styles.nav}>
+    <nav>
       <div className={styles.brand}>
         <h3>Bandage</h3>
+        <ul className={styles.navSmallItems}>
+          <li>
+            <a href="#">
+              <button className={[styles.btnSM20, styles.navBtn].join(" ")}>
+                <Search />
+              </button>
+            </a>
+          </li>
+          <li>
+            <a href="/shop/cart">
+              <button className={[styles.btnSM20, styles.navBtn].join(" ")}>
+                <ShoppingCart />
+                <small>{amount == 0 ? "" : amount}</small>
+              </button>
+            </a>
+          </li>
+          <li>
+            <button
+              className={[styles.hamburger, `${toggleNavMenu ? styles.active : styles.notActive}`].join(" ") }
+              onClick={() => setToggleNavMenu(!toggleNavMenu)}
+            >
+              <div className={styles.bar}></div>
+            </button>
+          </li>
+        </ul>
       </div>
-      <div className={styles.listMenu}>
+
+      <div
+        className={[styles.listMenu, `${toggleNavMenu ? styles.active : styles.notActive}`].join(
+          " "
+        )}
+      >
         <ul>
           <li>
             <a href="/">Home</a>
@@ -47,8 +79,8 @@ export default function NavBar() {
             <a href="#">Pages</a>
           </li>
         </ul>
-        <div>
-          <ul className={styles.ulButton}>
+        <div className={styles.ulButton}>
+          <ul>
             <li>
               <a href="#">
                 <button className={styles.btnSM20}>

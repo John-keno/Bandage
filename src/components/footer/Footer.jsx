@@ -110,7 +110,7 @@ export default function Footer() {
                     placeholder="Your Email"
                     type="email"
                   />
-                  <Button type="submit" style={{ borderRadius: "0 5px 5px 0" }}>
+                  <Button type="submit" style={{ borderRadius: "0 5px 5px 0", padding: '10px' }}>
                     Subscribe
                   </Button>
                 </form>
@@ -124,7 +124,7 @@ export default function Footer() {
         <section className={styles.bottomBanner}>
           <div className={styles.item}>
             <h6 style={{ color: "var(--gray)" }}>
-              Made With Love and Passion By Johkode All Right Reserved{" "}
+              Made With Love and Passion By Johkode <br /> All Right Reserved{" "}
             </h6>
           </div>
         </section>

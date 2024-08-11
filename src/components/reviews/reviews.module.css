@@ -32,7 +32,7 @@
   width: 100%;
   justify-content: center;
   text-align: center;
-  color: #F3CD03;
+  color: #f3cd03;
 }
 
 .reviewsContainer > .cards > .reviewsCard1 > .card1Items > .items > img {
@@ -52,9 +52,30 @@
 
 .reviewsContainer > .cards > .reviewsCard2 > .items {
   display: grid;
-  display: grid;
   justify-content: center;
   grid-template-columns: repeat(3, minmax(0, 142.77px));
   grid-template-rows: repeat(3, minmax(0, 142.77px));
   gap: 20px;
+}
+
+@media screen and (max-width: 992px) {
+  .reviewsContainer > .cards {
+    flex-direction: column;
+    padding: 0px;
+  }
+
+  .reviewsContainer > .cards .reviewsCard1,
+  .reviewsContainer > .cards .reviewsCard2 {
+    width: 100%;
+  }
+
+  .reviewsCard2 .items img {
+    object-fit: cover;
+    width: 100%;
+  }
+  .reviewsContainer > .cards > .reviewsCard2 > .items {
+    grid-template-columns: repeat(3, minmax(0, 100px));
+    grid-template-rows: repeat(3, minmax(0, 100px));
+    gap: 15.69px;
+  }
 }
